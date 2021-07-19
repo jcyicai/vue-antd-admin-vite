@@ -1,0 +1,44 @@
+{
+  "name": "jc-admin",
+  "version": "1.0.0",
+  "description": "a vue3 admin project",
+  "author": {
+    "name": "Jason Chen"
+  },
+  "scripts": {
+    "dev": "cross-env NODE_ENV=development vite",
+    "build": "vite build",
+    "serve": "vite preview"
+  },
+  "dependencies": {
+    "@ant-design/icons-vue": "^6.0.1",
+    "@logicflow/core": "^0.6.0",
+    "@logicflow/extension": "^0.6.0",
+    "ant-design-vue": "^2.2.2",
+    "axios": "^0.21.1",
+    "echarts": "^5.1.2",
+    "js-cookie": "^2.2.1",
+    "lodash": "^4.17.21",
+    "normalize.css": "^8.0.1",
+    "nprogress": "^0.2.0",
+    "path-to-regexp": "^6.2.0",
+    "vue": "^3.0.5",
+    "vue-simple-password-meter": "^0.0.24",
+    "vuex": "^4.0.2"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^1.2.5",
+    "@vue/compiler-sfc": "^3.0.5",
+    "autoprefixer": "^10.3.1",
+    "cross-env": "^7.0.3",
+    "eslint": "^7.31.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^3.4.0",
+    "eslint-plugin-vue": "^7.14.0",
+    "less": "^4.1.1",
+    "mockjs": "^1.1.0",
+    "prettier": "^2.3.2",
+    "vite": "^2.4.2",
+    "vite-plugin-mock": "^2.0.5"
+  }
+}
