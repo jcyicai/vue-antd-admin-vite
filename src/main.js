@@ -13,6 +13,8 @@ import * as permission from './permission' //路由权限
 
 import _ from 'lodash'
 
+import * as mockServer from '../mock/mock-server'
+
 const app = createApp(App)
 app.config.productionTip = false
 
@@ -28,3 +30,5 @@ app.use(router)
 app.use(store)
 
 app.mount('#app')
+
+mockServer(app)

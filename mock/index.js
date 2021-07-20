@@ -1,8 +1,7 @@
-const Mock = require('mockjs')
-const { param2Obj } = require('./utils')
-
-const user = require('./user')
-const role = require('./role')
+import Mock from 'mockjs'
+import { param2Obj } from './utils'
+import * as user from './user'
+import * as role from './role'
 
 const mocks = [...user, ...role]
 

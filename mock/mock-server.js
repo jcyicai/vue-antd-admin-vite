@@ -3,7 +3,8 @@ import bodyParser from 'body-parser'
 import chalk from 'chalk'
 import path from 'path'
 import Mock from 'mockjs'
-import { mocks } from './index.js'
+import { mocks } from './index'
+const baseApi = import.meta.env.VITE_APP_BASE_API
 
 const mockDir = path.join(process.cwd(), 'mock')
 
@@ -33,7 +34,7 @@ function unregisterRoutes() {
 
 const responseFake = (url, type, respond) => {
 	return {
-		url: new RegExp(`${process.env.VUE_APP_BASE_API}${url}`),
+		url: new RegExp(`${baseApi}${url}`),
 		type: type || 'get',
 		response(req, res) {
 			res.json(Mock.mock(respond instanceof Function ? respond(req, res) : respond))
@@ -42,6 +43,7 @@ const responseFake = (url, type, respond) => {
 }
 
 module.exports = (app) => {
+	debugger
 	app.use(bodyParser.json())
 	app.use(
 		bodyParser.urlencoded({

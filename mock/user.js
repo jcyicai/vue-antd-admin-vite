@@ -26,7 +26,7 @@ export default [
 	// 用户登录
 	{
 		url: '/jc-admin/user/login',
-		method: 'post',
+		type: 'post',
 		response: (config) => {
 			debugger
 			const { username } = config.body
@@ -50,7 +50,7 @@ export default [
 	// 获取用户信息
 	{
 		url: '/jc-admin/user/info.*',
-		method: 'get',
+		type: 'get',
 		response: (config) => {
 			const { token } = config.query
 			const info = users[token]
@@ -73,7 +73,7 @@ export default [
 	// 用户退出
 	{
 		url: '/jc-admin/user/logout',
-		method: 'post',
+		type: 'post',
 		response: (_) => {
 			return {
 				code: 200,
