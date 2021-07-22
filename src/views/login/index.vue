@@ -54,6 +54,7 @@
 import { ref, reactive, toRaw, watch } from 'vue'
 import { useRouter, useRoute } from 'vue-router'
 import { useStore } from 'vuex'
+import axios from 'axios'
 
 export default {
 	name: 'Login',
@@ -116,11 +117,12 @@ export default {
 							router.push({ path: redirect.value || '/', query: otherQuery.value })
 							loading.value = false
 						})
-						.catch(() => {
+						.catch((err) => {
 							loading.value = false
 						})
 				})
 				.catch((error) => {
+					debugger
 					loading.value = false
 				})
 		}

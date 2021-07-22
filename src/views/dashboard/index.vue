@@ -90,6 +90,7 @@ import { timeFix } from '@/utils'
 import Chart from '@/components/Charts/UserTargetChart.vue'
 import { UserOutlined } from '@ant-design/icons-vue'
 import { reactive, ref, onMounted } from 'vue'
+import userUrl from '@/assets/images/user.png'
 
 export default {
 	name: 'Dashboard',
@@ -98,7 +99,7 @@ export default {
 		// data
 		const timeFormat = timeFix()
 		const timeToFix = ref(timeFormat)
-		const avatarUrl = ref('../../assets/images/user.png')
+		const avatarUrl = ref(userUrl)
 		const loading = ref(true)
 		const projectData = reactive([
 			{ title: '阿里', content: 'this is a test', userName: 'Jason Chen', date: '2021-07-07' },

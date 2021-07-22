@@ -71,6 +71,7 @@ import {
 	BellOutlined
 } from '@ant-design/icons-vue'
 import Breadcrumb from '@/components/Breadcrumb/index.vue'
+import userUrl from '@/assets/images/user.png'
 
 export default {
 	name: 'NavBar',
@@ -94,7 +95,7 @@ export default {
 		const store = useStore()
 		const router = useRouter()
 
-		const avatarUrl = ref('../../assets/images/user.png')
+		const avatarUrl = ref(userUrl)
 		const jcMsgPopover = ref('jc-msg-popover')
 		const data = ref([
 			{

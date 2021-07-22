@@ -1,10 +1,9 @@
 import { createRouter, createWebHistory } from 'vue-router'
 
 import Layout from '@/layout/index.vue'
-/* import userCenterRouter from './modules/userCenter'
-import system from './modules/system'
-import permission from './modules/permission' */
-const modules = import.meta.glob('./modules/*.js')
+import userCenterRouter from './modules/userCenter.js'
+import systemRouter from './modules/system.js'
+import permissionRouter from './modules/permission.js'
 
 export const constantRoutes = [
 	{
@@ -49,7 +48,9 @@ export const constantRoutes = [
 ]
 
 export const asyncRoutes = [
-	modules,
+	systemRouter,
+	permissionRouter,
+	userCenterRouter,
 	{ path: '/:pathMatch(.*)*', name: 'NoFound', redirect: '/404', hidden: true }
 ]
 

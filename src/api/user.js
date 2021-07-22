@@ -4,7 +4,7 @@ export function login(data) {
 	return request({
 		url: '/jc-admin/user/login',
 		method: 'post',
-		params: data
+		data
 	})
 }
 

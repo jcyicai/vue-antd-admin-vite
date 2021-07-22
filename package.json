@@ -19,6 +19,7 @@
     "echarts": "^5.1.2",
     "js-cookie": "^2.2.1",
     "lodash": "^4.17.21",
+    "mockjs": "^1.1.0",
     "normalize.css": "^8.0.1",
     "nprogress": "^0.2.0",
     "path-to-regexp": "^6.2.0",
@@ -28,6 +29,7 @@
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^1.2.5",
+    "@vitejs/plugin-vue-jsx": "^1.1.6",
     "@vue/compiler-sfc": "^3.0.5",
     "autoprefixer": "^10.3.1",
     "cross-env": "^7.0.3",
@@ -37,8 +39,9 @@
     "eslint-plugin-vue": "^7.14.0",
     "less": "^4.1.1",
     "mockjs": "^1.1.0",
+    "path-to-regexp": "^6.2.0",
     "prettier": "^2.3.2",
     "vite": "^2.4.2",
-    "vite-plugin-mock": "^2.9.3"
+    "vite-plugin-mockit": "^1.0.2"
   }
 }
