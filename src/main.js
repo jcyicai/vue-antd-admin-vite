@@ -9,7 +9,9 @@ import App from './App.vue'
 import router from './router'
 import store from './store'
 
-import * as permission from './permission' //路由权限
+import './permission' //路由权限
+
+import permission from '@/directive/permission/index.js' // 权限按钮
 
 import _ from 'lodash'
 

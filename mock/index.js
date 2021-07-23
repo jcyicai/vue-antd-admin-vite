@@ -45,7 +45,7 @@ const constantRoutes = [
 		},
 		children: [
 			{
-				path: 'dashboard',
+				path: '/dashboard',
 				component: 'views/dashboard/index',
 				name: 'Dashboard',
 				meta: { title: '控制台', icon: 'DashboardOutlined' }
@@ -55,6 +55,61 @@ const constantRoutes = [
 ]
 
 const asyncRoutes = [
+	{
+		path: '/system',
+		component: 'layout/Layout',
+		redirect: '/system/roleList',
+		alwaysShow: true,
+		name: 'System',
+		meta: {
+			title: '系统管理',
+			icon: 'SettingOutlined',
+			roles: ['admin']
+		},
+		children: [
+			{
+				path: '/system/roleList',
+				component: 'views/system/roleList',
+				name: 'RoleList',
+				meta: {
+					title: '角色管理',
+					roles: ['admin']
+				}
+			},
+			{
+				path: '/system/approvalFlowConfig',
+				component: 'views/system/approvalFlowConfig',
+				name: 'ApprovalFlowConfig',
+				meta: {
+					title: '审批流配置',
+					roles: ['admin']
+				}
+			}
+		]
+	},
+	{
+		path: '/permission',
+		component: 'layout/Layout',
+		redirect: '/permission/rolePermissionList',
+		alwaysShow: true,
+		name: 'Permission',
+		meta: {
+			title: '权限管理',
+			icon: 'KeyOutlined',
+			roles: ['admin']
+		},
+		children: [
+			{
+				path: '/permission/rolePermissionList',
+				component: 'views/permission/rolePermissionList',
+				name: 'RolePermissionList',
+				meta: {
+					title: '角色权限分配',
+					roles: ['admin']
+				}
+			}
+		]
+	},
 	{
 		path: '/userCenter',
 		component: 'layout/Layout',
@@ -68,67 +123,12 @@ const asyncRoutes = [
 		},
 		children: [
 			{
-				path: 'userSet',
+				path: '/userCenter/userSet',
 				component: 'views/userCenter/userSet',
 				name: 'UserSet',
 				meta: {
 					title: '个人设置',
 					roles: ['admin', 'editor']
-				}
-			}
-		]
-	},
-	{
-		path: '/system',
-		component: 'layout/Layout',
-		redirect: 'roleList',
-		alwaysShow: true,
-		name: 'System',
-		meta: {
-			title: '系统管理',
-			icon: 'SettingOutlined',
-			roles: ['admin']
-		},
-		children: [
-			{
-				path: 'roleList',
-				component: 'views/system/roleList',
-				name: 'RoleList',
-				meta: {
-					title: '角色管理',
-					roles: ['admin']
-				}
-			},
-			{
-				path: 'approvalFlowConfig',
-				component: 'views/system/approvalFlowConfig',
-				name: 'ApprovalFlowConfig',
-				meta: {
-					title: '审批流配置',
-					roles: ['admin']
-				}
-			}
-		]
-	},
-	{
-		path: '/permission',
-		component: 'layout/Layout',
-		redirect: 'rolePermissionList',
-		alwaysShow: true,
-		name: 'Permission',
-		meta: {
-			title: '权限管理',
-			icon: 'KeyOutlined',
-			roles: ['admin']
-		},
-		children: [
-			{
-				path: 'rolePermissionList',
-				component: 'views/permission/rolePermissionList',
-				name: 'RolePermissionList',
-				meta: {
-					title: '角色权限分配',
-					roles: ['admin']
 				}
 			}
 		]
@@ -257,6 +257,14 @@ module.exports = {
 		return res.json({
 			code: 200,
 			data: roles
+		})
+	},
+	'DELETE /jc-admin/role/:id': (req, res) => {
+		return res.send({
+			code: 200,
+			data: {
+				status: 'success'
+			}
 		})
 	}
 }

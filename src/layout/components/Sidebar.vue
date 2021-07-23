@@ -74,8 +74,8 @@ export default {
 		watch(
 			() => route.path,
 			(path) => {
-				selectedKeys.value = path.indexOf('/', 1) > -1 ? [path] : [path.substr(1, path.length)]
-
+				//selectedKeys.value = path.indexOf('/', 1) > -1 ? [path] : [path.substr(1, path.length)]
+				selectedKeys.value = [path]
 				openKeys.value = path.indexOf('/', 1) > -1 ? [path.substr(0, path.indexOf('/', 1))] : []
 			},
 			{ immediate: true }

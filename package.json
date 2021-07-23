@@ -24,7 +24,7 @@
     "nprogress": "^0.2.0",
     "path-to-regexp": "^6.2.0",
     "vue": "^3.0.5",
-    "vue-simple-password-meter": "^0.0.24",
+    "vue-simple-password-meter": "^1.0.3",
     "vuex": "^4.0.2"
   },
   "devDependencies": {
@@ -43,5 +43,6 @@
     "prettier": "^2.3.2",
     "vite": "^2.4.2",
     "vite-plugin-mockit": "^1.0.2"
-  }
+  },
+  "license": "MIT"
 }

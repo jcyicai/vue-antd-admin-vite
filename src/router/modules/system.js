@@ -13,7 +13,7 @@ const systemRouter = {
 	},
 	children: [
 		{
-			path: 'roleList',
+			path: '/system/roleList',
 			component: () => import('@/views/system/roleList.vue'),
 			name: 'RoleList',
 			meta: {
@@ -22,7 +22,7 @@ const systemRouter = {
 			}
 		},
 		{
-			path: 'approvalFlowConfig',
+			path: '/system/approvalFlowConfig',
 			component: () => import('@/views/system/approvalFlowConfig.vue'),
 			name: 'ApprovalFlowConfig',
 			meta: {

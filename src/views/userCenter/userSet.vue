@@ -31,7 +31,7 @@ export default {
 		const selectedKeys = ref(['1'])
 
 		const curMenuComponent = computed(() => {
-			return selectedKeys.value.indexOf('1') > -1 ? 'BasicSet' : 'SafeSet'
+			return selectedKeys.value.indexOf('1') > -1 ? BasicSet : SafeSet
 		})
 
 		// methods

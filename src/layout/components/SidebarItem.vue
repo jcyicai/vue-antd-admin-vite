@@ -23,10 +23,8 @@
 				</span>
 			</template>
 			<template v-for="child in item.children" :key="child.path">
-				<router-link v-if="child.meta" :to="resolvePath(`${item.path}/${child.path}`)">
-					<a-menu-item :key="resolvePath(`${item.path}/${child.path}`)">{{
-						child.meta.title
-					}}</a-menu-item>
+				<router-link v-if="child.meta" :to="resolvePath(child.path)">
+					<a-menu-item :key="resolvePath(child.path)">{{ child.meta.title }}</a-menu-item>
 				</router-link>
 			</template>
 		</a-sub-menu>
@@ -36,7 +34,7 @@
 <script>
 import { ref } from 'vue'
 import { isExternal } from '@/utils/validate'
-//import path from 'path'
+//import { path } from 'path'
 
 export default {
 	name: 'SidebarItem',
@@ -80,13 +78,13 @@ export default {
 		}
 
 		const resolvePath = (routePath) => {
-			/* 	if (isExternal(routePath)) {
+			/* if (isExternal(routePath)) {
 				return routePath
 			}
 			if (isExternal(props.basePath)) {
 				return props.basePath
-			} */
-			//return path.resolve(props.basePath, routePath)
+			}
+			return path.resolve(props.basePath, routePath) */
 
 			return routePath
 		}

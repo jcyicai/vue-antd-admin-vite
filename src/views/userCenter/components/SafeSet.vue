@@ -10,7 +10,7 @@
 						</a-form-item>
 						<a-form-item label="新密码" required>
 							<a-input-password v-model:value="formState.newPassword" placeholder="请输入" />
-							<password-meter @score="onScore" :password="formState.newPassword" />
+							<!-- <password-meter @score="onScore" :password="formState.newPassword" /> -->
 						</a-form-item>
 						<a-form-item label="确认密码" required>
 							<a-input-password v-model:value="formState.confirmPassword" placeholder="请输入" />
@@ -28,11 +28,11 @@
 <script>
 import { message } from 'ant-design-vue'
 import { ref, reactive } from 'vue'
-import PasswordMeter from 'vue-simple-password-meter'
+//import PasswordMeter from 'vue-simple-password-meter'
 
 export default {
 	name: 'SafeSet',
-	components: { PasswordMeter },
+	//components: { PasswordMeter },
 	setup() {
 		// data
 		const formState = reactive({
@@ -44,12 +44,12 @@ export default {
 		const score = ref(null)
 
 		// methods
-		const onScore = (payload) => {
+		/* 	const onScore = (payload) => {
 			//console.log(payload.score) // from 0 to 4
 			//console.log(payload.strength) // one of : 'risky', 'guessable', 'weak', 'safe' , 'secure'
 			score.value = payload.score
 		}
-
+ */
 		const handleUpdate = () => {
 			message.success('更新成功')
 		}
@@ -57,8 +57,8 @@ export default {
 		return {
 			formState,
 			score,
-			handleUpdate,
-			onScore
+			handleUpdate
+			//onScore
 		}
 	}
 }

@@ -18,8 +18,8 @@
 					:pagination="pagination"
 					:loading="loading"
 				>
-					<template #operation="{  record,index }">
-						<a @click="handleShowDrawer(2, record)">编辑</a>
+					<template #operation="{ record, index }">
+						<a @click="handleShowDrawer(2, record)" v-permission="['admin']">编辑</a>
 						<a-divider type="vertical" />
 						<a @click="handleShowDrawer(3, record)">详情</a>
 						<a-divider type="vertical" />

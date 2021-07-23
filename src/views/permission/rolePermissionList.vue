@@ -18,7 +18,7 @@
 					:pagination="pagination"
 					:loading="loading"
 				>
-					<template #operation="{  record }">
+					<template #operation="{ record }">
 						<a @click="handleAllotAuth(record)">分配权限</a>
 					</template>
 				</a-table>

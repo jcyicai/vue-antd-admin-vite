@@ -13,7 +13,7 @@ const permissionRouter = {
 	},
 	children: [
 		{
-			path: 'rolePermissionList',
+			path: '/permission/rolePermissionList',
 			component: () => import('@/views/permission/rolePermissionList.vue'),
 			name: 'RolePermissionList',
 			meta: {

@@ -13,7 +13,7 @@ const userCenterRouter = {
 	},
 	children: [
 		{
-			path: 'userSet',
+			path: '/userCenter/userSet',
 			component: () => import('@/views/userCenter/userSet.vue'),
 			name: 'UserSet',
 			meta: {
