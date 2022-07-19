@@ -100,6 +100,6 @@ npm run dev
 
 ## License
 
-[MIT](https://github.com/chenyicai622/vue-blog-template/blob/main/LICENSE)
+[MIT](https://github.com/chenyicai622/vue-antd-admin-vite/blob/master/LICENSE)
 
 Copyright (c) 2021 Jason Chen
