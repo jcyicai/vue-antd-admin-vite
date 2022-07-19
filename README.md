@@ -6,9 +6,9 @@
 
 ## 简介
 
-[vue-antd-admin-vite](https://github.com/JasonChen1719/vue-antd-admin-vite) 是基于vue3.0 + vite + vue-router4.x + vuex4.x + ant-design-vue2.x开发的后台管理系统模板，包含权限路由、权限按钮、流程配置、个人中心等基础功能
+[vue-antd-admin-vite](https://github.com/chenyicai622/vue-antd-admin-vite) 是基于vue3.0 + vite + vue-router4.x + vuex4.x + ant-design-vue2.x开发的后台管理系统模板，包含权限路由、权限按钮、流程配置、个人中心等基础功能
 
-- vue-cli4.0版本：[vue-antd-admin](https://github.com/JasonChen1719/vue-antd-admin) 
+- vue-cli4.0版本：[vue-antd-admin](https://github.com/chenyicai622/vue-antd-admin) 
 
 **如有改进及优化建议，请发送本人邮箱chenyicai622@qq.com**
 
@@ -73,7 +73,7 @@
 
 ```bash
 # 克隆项目
-git clone https://github.com/JasonChen1719/vue-antd-admin-vite.git
+git clone https://github.com/chenyicai622/vue-antd-admin-vite.git
 
 # 进入项目目录
 cd vue-antd-admin-vite
@@ -100,6 +100,6 @@ npm run dev
 
 ## License
 
-[MIT](https://github.com/JasonChen1719/vue-blog-template/blob/main/LICENSE)
+[MIT](https://github.com/chenyicai622/vue-blog-template/blob/main/LICENSE)
 
 Copyright (c) 2021 Jason Chen
