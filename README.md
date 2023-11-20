@@ -10,7 +10,7 @@
 
 - vue-cli4.0版本：[vue-antd-admin](https://github.com/jcyicai/vue-antd-admin) 
 
-**如有改进及优化建议，请发送本人邮箱chenyicai622@qq.com**
+**如有改进及优化建议，请提交issues**
 
 **如果觉得不错，别忘了右上角，点个星星哟~~**
 
